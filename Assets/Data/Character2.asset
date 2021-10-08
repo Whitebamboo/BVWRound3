@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049328c9df24eb54fb59e75616bb4ce6, type: 3}
+  m_Name: Character2
+  m_EditorClassIdentifier: 
+  peopleName: Secretary
+  dialogData:
+  - dialogs:
+    - "Hello\u2026 you! The boss will see you soon."
+    - "Maybe I shouldn\u2019t mention this, but it could be about that promotion
+      everyone\u2019s been blabbering about. "
+    - 'Some employees say they would do ANYTHING for this opportunity. '
+    - "And I gotta say, a little birdie told me you were seen sticking post-it notes
+      reading \u201CLOSER\u201D on people\u2019s backs to lower their morale. "
+    - Devastating, really.
+    - "Tell me sweetie.. You can trust me\u2026 Is this true?"
+    responses:
+    - gesture: 0
+      response:
+      - 'I see! '
+      - 'How fascinating, indeed! '
+      - "Don\u2019t worry darling, your secret\u2019s safe with me, I will SO not
+        tell ANYONE about this, promise. "
+      - "Now, if you\u2019ll excuse me, I just need to send a quick message to a
+        group chat. "
+      reputation: -10
+    - gesture: 1
+      response:
+      - "Right, right\u2026"
+      - "I mean, I guess I\u2019ll have to take your word for it."
+      - Never seen you near the stack of post-it notes, come to think of it.
+      reputation: 10
+    - gesture: 2
+      response:
+      - Oh, darling!
+      - No need to go to extremes, haha!
+      - "Your aggressiveness makes me question if you\u2019re hiding something..."
+      - "Guess we\u2019re all innocent until proven guilty, right?"
+      reputation: 0
+  - dialogs:
+    - Ok, the boss will see you now, I will leave you to it.
+    - "I need to run to a caf\xE9 and fetch him an americano."
+    - "Truly, can\u2019t grown men just get their own coffee?"
+    - Is it too much to ask?
+    responses:
+    - gesture: 0
+      response:
+      - "Right\u2026"
+      - Here I am, pouring my heart out, and all I get is a meager thumbs up...
+      - Gotta practice my acting skills.
+      reputation: 0
+    - gesture: 1
+      response:
+      - "(Indignant)Mmm, well, of course you wouldn\u2019t agree."
+      - "I bet you can\u2019t even do your own laundry."
+      - Gamers are all a bit... useless, after all.
+      reputation: -10
+    - gesture: 2
+      response:
+      - Exactly, take down the patriarchy!!!
+      - Nice chat, good luck dear!
+      reputation: 10

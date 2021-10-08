@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049328c9df24eb54fb59e75616bb4ce6, type: 3}
+  m_Name: Character3
+  m_EditorClassIdentifier: 
+  peopleName: Boss
+  dialogData:
+  - dialogs:
+    - Ahh, here you are!
+    - I want us to chat, and I expect your full honesty in this pressing matter.
+    - Do you like this tie?
+    - My wife got it for me on my birthday.
+    responses:
+    - gesture: 0
+      response:
+      - I see, playing it safe.
+      - "It\u2019s an awful tie, she bought it with just a fistful of dollars and
+        a dozen drinks in her system, on an all-galls trip to Vegas."
+      - "I gotta say, I\u2019m disappointed."
+      reputation: -15
+    - gesture: 1
+      response:
+      - "Indeed, indeed, it\u2019s a terrible accessory."
+      - She bought it with just a fistful of dollars and a dozen drinks in her system,
+        on an all-galls trip to Vegas.
+      - I like your truthfulness.
+      reputation: 15
+    - gesture: 2
+      response:
+      - "Right, it\u2019s an awful item."
+      - She bought it with just a fistful of dollars and a dozen drinks in her system,
+        on an all-galls trip to Vegas.
+      - "But she\u2019s still a lovely woman, makes me coffee *ahem* almost every
+        morning, so let\u2019s keep it professional."
+      reputation: 0
+  - dialogs:
+    - Let's get down to business.
+    - 'I had a meeting with Bob from the Art department earlier today and he told
+      me I should fire you. '
+    - He insists that you broke into the studios last night and glued googly eyes
+      on all their character sketches.
+    - 'Let me ask you this: should I fire Bob? '
+    responses:
+    - gesture: 0
+      response:
+      - Yes, yes! I should fire Bob.
+      - We have no space for that kind of trash talk in this company, for making
+        such damaging accusations against a coworker.
+      - 'Also, between you and me, who even cares about the Art department? '
+      reputation: 15
+    - gesture: 1
+      response:
+      - "Mmm, I understand you\u2019re trying to be diplomatic."
+      - "But Bob\u2019s a big loser, I saw it clearly written on his back. "
+      - "So I\u2019ll fire him just the same."
+      reputation: 0
+    - gesture: 2
+      response:
+      - "Are you\u2026 suggesting that what I\u2019m suggesting is a bad idea..? "
+      - "I\u2019m in charge here, and the quality of my propositions should not be
+        questioned by lame inferiors like you."
+      - Also, I hate your shirt.
+      reputation: -15
+  - dialogs:
+    - Ok, one last question for you.
+    - Before I let you go back to work.
+    - "Just a thought I\u2019ve been having\u2026"
+    - How do you feel about 3D models?
+    responses:
+    - gesture: 0
+      response:
+      - No! NO!!!
+      - We DO NOT do 3D models here at Flat Games Co.
+      - I HATE THEM.
+      - What are you even doing here???
+      reputation: -15
+    - gesture: 1
+      response:
+      - Great, we DO NOT do 3D models here at Flat Games Co.
+      - But more hatred is desired.
+      - 'Keep that in mind the next time someone asks you this question. '
+      reputation: 0
+    - gesture: 2
+      response:
+      - YES! Exactly!!!
+      - We DO NOT do 3D models here at Flat Games Co.
+      - You truly are a company ambassador at heart.
+      - Also, I love your shirt.
+      reputation: 15
