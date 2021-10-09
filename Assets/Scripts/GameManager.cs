@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     static GameManager s_Instance;
     public static GameManager Instance => s_Instance;
 
+    public GestureDectection gestureDectection;
+
     public PersonData[] data;
     public GameObject TextTyper;
     public GestureEnum gestureState; 
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
         TextTyper = GameObject.FindGameObjectWithTag("Typer");
 
         StartCoroutine("TestCode");
+
+        gestureDectection = FindObjectOfType<GestureDectection>();
     }
     private void Update()
     {
@@ -85,8 +89,10 @@ public class GameManager : MonoBehaviour
             else if(guestState == GuestState.WaitForGesture)
             {
                 //
+                gestureDectection.BeginRecognize();
                 if (GestureFinished)
                 {
+                    gestureDectection.StopRecognize();
                     guestState = GuestState.Response;
                     AskTextTyperShowResponse(data[personIndex]);
                 }
@@ -117,6 +123,42 @@ public class GameManager : MonoBehaviour
             gestureState = GestureEnum.MiddleFinger;
             GestureFinished = true;
         }
+
+        //Read gesture from GestureDectection
+        GestureType currentGesture = gestureDectection.matchedGesture;
+        if (currentGesture != GestureType.Undefined)
+        {
+            switch (currentGesture)
+            {
+                case GestureType.ThumbsUp:
+                {
+                    gestureState = GestureEnum.ThumbsUp;
+                    GestureFinished = true;
+                    Debug.LogWarning("->ThumbsUp");
+                    break;
+                }
+                case GestureType.ThumbsDown:
+                {
+                    gestureState = GestureEnum.ThumbsDown;
+                    GestureFinished = true;
+                    Debug.LogWarning("->ThumbsDown");
+                    break;
+                }
+                case GestureType.MiddleFinger:
+                {
+                    gestureState = GestureEnum.MiddleFinger;
+                    GestureFinished = true;
+                    Debug.LogWarning("->MiddleFinger");
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+     
+        }
+
     }
     
     
