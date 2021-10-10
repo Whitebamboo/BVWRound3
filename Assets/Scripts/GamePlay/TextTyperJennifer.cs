@@ -45,9 +45,9 @@ namespace RedBlueGames.Tools.TextTyper
         [Tooltip("Chatacter's name")]
         private GameObject NameText;
 
-        [SerializeField]
-        [Tooltip("Current Reputation")]
-        private GameObject ReputationText;
+        //[SerializeField]
+        //[Tooltip("Current Reputation")]
+        //private GameObject ReputationText;
 
 #pragma warning restore 0649
         public void Start()
@@ -90,8 +90,8 @@ namespace RedBlueGames.Tools.TextTyper
                 tag = RichTextTag.ParseNext("This tag is a closing tag </bold>");
                 LogTag(tag);
             }
-            int reputationText = GameManager.Reputation;
-            this.ReputationText.GetComponent<TextMeshProUGUI>().text = reputationText.ToString();
+            //int reputationText = GameManager.Reputation;
+            //this.ReputationText.GetComponent<TextMeshProUGUI>().text = reputationText.ToString();
         }
         public void StartText()
         {
@@ -174,6 +174,12 @@ namespace RedBlueGames.Tools.TextTyper
         }
 
         IEnumerator ShowNextScript()
+        {
+            yield return new WaitForSeconds(NextScriptInterval);
+            HandlePrintNextClicked();
+        }
+
+        IEnumerator WaitForGesture()
         {
             yield return new WaitForSeconds(NextScriptInterval);
             HandlePrintNextClicked();
