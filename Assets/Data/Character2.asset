@@ -35,7 +35,7 @@ MonoBehaviour:
       - "Now, if you\u2019ll excuse me, I just need to send a quick message to a
         group chat. "
       portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: 748c4b466a4052743a6548b6a992eb57, type: 3}
       reputation: -10
     - gesture: 1
       response:
@@ -43,7 +43,7 @@ MonoBehaviour:
       - "I mean, I guess I\u2019ll have to take your word for it."
       - Never seen you near the stack of post-it notes, come to think of it.
       portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: c68c53d84ba02eb4c82e60d0dcb90e9c, type: 3}
       reputation: 10
     - gesture: 2
       response:
@@ -52,7 +52,7 @@ MonoBehaviour:
       - "Your aggressiveness makes me question if you\u2019re hiding something..."
       - "Guess we\u2019re all innocent until proven guilty, right?"
       portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: 9cd30b6d4f500e246ae03855a7857766, type: 3}
       reputation: 0
   - dialogs:
     - Ok, the boss will see you now, I will leave you to it.
@@ -68,7 +68,7 @@ MonoBehaviour:
       - Here I am, pouring my heart out, and all I get is a meager thumbs up...
       - Gotta practice my acting skills.
       portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: 3406a8a99b0f6b640b70c130c7c3c428, type: 3}
       reputation: 0
     - gesture: 1
       response:
@@ -76,12 +76,12 @@ MonoBehaviour:
       - "I bet you can\u2019t even do your own laundry."
       - Gamers are all a bit... useless, after all.
       portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: b1226206267e3314fa28e17e1c5bff31, type: 3}
       reputation: -10
     - gesture: 2
       response:
       - Exactly, take down the patriarchy!!!
       - Nice chat, good luck dear!
       portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
-      sound: {fileID: 0}
+      sound: {fileID: 8300000, guid: a4a54b1dcd5817349af955eb16eafee6, type: 3}
       reputation: 10
