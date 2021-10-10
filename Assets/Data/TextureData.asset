@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dac8e651aaf04c4fb7d75cecf5a97ed, type: 3}
+  m_Name: TextureData
+  m_EditorClassIdentifier: 
+  gesture_List:
+  - Gesture_Name: Okay
+    texture: {fileID: 21300000, guid: 0c43da8492fdb78429973acfa137082b, type: 3}
+  - Gesture_Name: ThumbsUp
+    texture: {fileID: 21300000, guid: 84b077597d329f04992cc482ce2542aa, type: 3}
+  - Gesture_Name: ThumbsDown
+    texture: {fileID: 21300000, guid: ad551cc6c0b548149bf5d84520756ad5, type: 3}
+  - Gesture_Name: RaisedHand
+    texture: {fileID: 21300000, guid: 117c6bd21bba43f40a6c1a4a32dd5e32, type: 3}
