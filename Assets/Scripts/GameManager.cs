@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     {
         TextTyper = GameObject.FindGameObjectWithTag("Typer");
 
-        StartCoroutine("TestCode");
+        //StartCoroutine("TestCode");
 
         gestureDectection = FindObjectOfType<GestureDectection>();
     }
