@@ -16,8 +16,8 @@ namespace RedBlueGames.Tools.TextTyper
         [HideInInspector]public GameObject GM;
         public float NextScriptInterval = 7f;
 
-        
-        
+        public GestureDectection gestureDectection;
+
 #pragma warning disable 0649 // Ignore "Field is never assigned to" warning, as these are assigned in inspector
         [SerializeField]
         private AudioClip printSoundEffect;
@@ -34,6 +34,8 @@ namespace RedBlueGames.Tools.TextTyper
         private Toggle pauseGameToggle;
 
         private Queue<string> dialogueLines = new Queue<string>();
+        private Queue<Sprite> sprites = new Queue<Sprite>();
+        private Queue<AudioClip> audios = new Queue<AudioClip>();
 
         [SerializeField]
         [Tooltip("The text typer element to test typing with")]
@@ -50,6 +52,7 @@ namespace RedBlueGames.Tools.TextTyper
 #pragma warning restore 0649
         public void Start()
         {
+            gestureDectection = FindObjectOfType<GestureDectection>();
             GM = GameObject.Find("GameManager");
             this.testTextTyper.PrintCompleted.AddListener(this.HandlePrintCompleted);
             this.testTextTyper.CharacterPrinted.AddListener(this.HandleCharacterPrinted);
@@ -166,7 +169,7 @@ namespace RedBlueGames.Tools.TextTyper
         {
             Debug.Log("TypeText Complete");
             //3secs later show next scripts
-            StartCoroutine("ShowNextScript");
+            StartCoroutine("WaitForGesture");
 
 
         }
@@ -179,6 +182,17 @@ namespace RedBlueGames.Tools.TextTyper
 
         IEnumerator WaitForGesture()
         {
+            while (true)
+            {
+                if (gestureDectection.matchedGesture == GestureType.MoveNext)
+                {
+                    break;
+                }
+                else
+                {
+                    yield return null;
+                }
+            }
             yield return new WaitForSeconds(NextScriptInterval);
             HandlePrintNextClicked();
         }

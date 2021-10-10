@@ -9,7 +9,8 @@ public enum GestureType
     Undefined,
     ThumbsUp,
     ThumbsDown,
-    MiddleFinger
+    MiddleFinger,
+    MoveNext
 }
 
 [System.Serializable]

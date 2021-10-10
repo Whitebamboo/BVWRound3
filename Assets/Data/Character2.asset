@@ -23,6 +23,8 @@ MonoBehaviour:
       reading \u201CLOSER\u201D on people\u2019s backs to lower their morale. "
     - Devastating, really.
     - "Tell me sweetie.. You can trust me\u2026 Is this true?"
+    portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+    sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
@@ -32,12 +34,16 @@ MonoBehaviour:
         tell ANYONE about this, promise. "
       - "Now, if you\u2019ll excuse me, I just need to send a quick message to a
         group chat. "
+      portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
+      sound: {fileID: 0}
       reputation: -10
     - gesture: 1
       response:
       - "Right, right\u2026"
       - "I mean, I guess I\u2019ll have to take your word for it."
       - Never seen you near the stack of post-it notes, come to think of it.
+      portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
+      sound: {fileID: 0}
       reputation: 10
     - gesture: 2
       response:
@@ -45,27 +51,37 @@ MonoBehaviour:
       - No need to go to extremes, haha!
       - "Your aggressiveness makes me question if you\u2019re hiding something..."
       - "Guess we\u2019re all innocent until proven guilty, right?"
+      portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+      sound: {fileID: 0}
       reputation: 0
   - dialogs:
     - Ok, the boss will see you now, I will leave you to it.
     - "I need to run to a caf\xE9 and fetch him an americano."
     - "Truly, can\u2019t grown men just get their own coffee?"
     - Is it too much to ask?
+    portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+    sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
       - "Right\u2026"
       - Here I am, pouring my heart out, and all I get is a meager thumbs up...
       - Gotta practice my acting skills.
+      portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+      sound: {fileID: 0}
       reputation: 0
     - gesture: 1
       response:
       - "(Indignant)Mmm, well, of course you wouldn\u2019t agree."
       - "I bet you can\u2019t even do your own laundry."
       - Gamers are all a bit... useless, after all.
+      portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
+      sound: {fileID: 0}
       reputation: -10
     - gesture: 2
       response:
       - Exactly, take down the patriarchy!!!
       - Nice chat, good luck dear!
+      portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
+      sound: {fileID: 0}
       reputation: 10

@@ -185,6 +185,9 @@ public class GameManager : MonoBehaviour
         message[0] = dp.Dialogs;
         message[1] = personData.PeopleName;
 
+        PortraitManager.Instance.SetPortrait(dp.Portraits);
+        MusicManager.Instance.PlayClip(dp.Sound);
+
         TextTyper.SendMessage("ReceiveDialogEvent", message, SendMessageOptions.RequireReceiver);
     }
 
@@ -221,10 +224,15 @@ public class GameManager : MonoBehaviour
     {
         print("AskTextTyperShowResponse");
         string[] stringArr = personData.DialogData[dialogIndex].Responses[(int)gestureState].Response;
+        Sprite portrait = personData.DialogData[dialogIndex].Responses[(int)gestureState].Portrait;
+        AudioClip aduio = personData.DialogData[dialogIndex].Responses[(int)gestureState].Sound;
 
         object[] message = new object[2];
         message[0] = stringArr;
         message[1] = personData.PeopleName;
+
+        PortraitManager.Instance.SetPortrait(portrait);
+        MusicManager.Instance.PlayClip(aduio);
 
         TextTyper.SendMessage("ReceiveDialogEvent", message, SendMessageOptions.RequireReceiver);
 
