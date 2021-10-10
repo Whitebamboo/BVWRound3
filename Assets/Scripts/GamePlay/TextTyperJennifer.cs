@@ -13,8 +13,8 @@ namespace RedBlueGames.Tools.TextTyper
     public class TextTyperJennifer : MonoBehaviour
     {
 
-        public GameObject GameManager;
-        public float NextScriptInterval = 5f;
+        [HideInInspector]public GameObject GM;
+        public float NextScriptInterval = 7f;
 
         
         
@@ -43,11 +43,14 @@ namespace RedBlueGames.Tools.TextTyper
         [Tooltip("Chatacter's name")]
         private GameObject NameText;
 
+        [SerializeField]
+        [Tooltip("Current Reputation")]
+        private GameObject ReputationText;
 
 #pragma warning restore 0649
         public void Start()
         {
-            GameManager = GameObject.Find("GameManager");
+            GM = GameObject.Find("GameManager");
             this.testTextTyper.PrintCompleted.AddListener(this.HandlePrintCompleted);
             this.testTextTyper.CharacterPrinted.AddListener(this.HandleCharacterPrinted);
 
@@ -85,6 +88,8 @@ namespace RedBlueGames.Tools.TextTyper
                 tag = RichTextTag.ParseNext("This tag is a closing tag </bold>");
                 LogTag(tag);
             }
+            int reputationText = GameManager.Reputation;
+            this.ReputationText.GetComponent<TextMeshProUGUI>().text = reputationText.ToString();
         }
         public void StartText()
         {
@@ -94,6 +99,7 @@ namespace RedBlueGames.Tools.TextTyper
         public void ReceiveDialogEvent(object[] obj)//???string[] stringArr, string name
         {
             //name
+            
             this.NameText.GetComponent<TextMeshProUGUI>().text = (string)obj[1];
             foreach (var d in (string[])obj[0])
             {
@@ -122,7 +128,7 @@ namespace RedBlueGames.Tools.TextTyper
         {
             if (dialogueLines.Count <= 0)
             {
-                GameManager.SendMessage("WhenTypingCompletedEvent");
+                GM.SendMessage("WhenTypingCompletedEvent");
                 return;
             }
 

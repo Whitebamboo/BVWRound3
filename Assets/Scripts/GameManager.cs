@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public PersonData[] data;
     public GameObject TextTyper;
     public GestureEnum gestureState; 
-    public int Reputation = 0;
+    public static int Reputation = 0;
 
 
     [HideInInspector] public GameState state;
@@ -105,16 +105,19 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             gestureState = GestureEnum.ThumbsUp;
+            changeRepulation(GestureEnum.ThumbsUp);
             GestureFinished = true;
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
             gestureState = GestureEnum.ThumbsDown;
+            changeRepulation(GestureEnum.ThumbsDown);
             GestureFinished = true;
         }
         else if (Input.GetKeyDown(KeyCode.C))
         {
             gestureState = GestureEnum.MiddleFinger;
+            changeRepulation(GestureEnum.MiddleFinger);
             GestureFinished = true;
         }
     }
@@ -202,7 +205,10 @@ public class GameManager : MonoBehaviour
             state = GameState.Ending;
         }
     }
-
+    public void changeRepulation(GestureEnum g)
+    {
+        Reputation += data[personIndex].DialogData[dialogIndex].Responses[(int)g].Reputation;
+    }
     IEnumerator TestCode()
     {
         yield return new WaitForSeconds(5);
