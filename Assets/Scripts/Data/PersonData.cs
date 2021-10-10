@@ -17,9 +17,13 @@ public class PersonData : ScriptableObject
 public class DialogPack
 {
     [SerializeField] string[] dialogs;
+    [SerializeField] Sprite portrait;
+    [SerializeField] AudioClip sound;
     [SerializeField] GestureResponse[] responses;
 
     public string[] Dialogs => dialogs;
+    public Sprite Portraits => portrait;
+    public AudioClip Sound => sound;
     public GestureResponse[] Responses => responses;
 }
 
@@ -28,10 +32,14 @@ public class GestureResponse
 {
     [SerializeField] GestureEnum gesture;
     [SerializeField] string[] response;
+    [SerializeField] Sprite portrait;
+    [SerializeField] AudioClip sound;
     [SerializeField] int reputation;
 
     public GestureEnum Gesture => gesture;
     public string[] Response => response;
+    public Sprite Portrait => portrait;
+    public AudioClip Sound => sound;
     public int Reputation => reputation;
 }
 

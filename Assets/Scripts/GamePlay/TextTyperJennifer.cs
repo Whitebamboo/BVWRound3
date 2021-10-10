@@ -34,6 +34,8 @@ namespace RedBlueGames.Tools.TextTyper
         private Toggle pauseGameToggle;
 
         private Queue<string> dialogueLines = new Queue<string>();
+        private Queue<Sprite> sprites = new Queue<Sprite>();
+        private Queue<AudioClip> audios = new Queue<AudioClip>();
 
         [SerializeField]
         [Tooltip("The text typer element to test typing with")]
