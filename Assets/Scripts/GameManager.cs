@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public PersonData[] data;
     public GameObject TextTyper;
     public GestureEnum gestureState; 
-    public int Reputation = 0;
+    public static int Reputation = 0;
 
 
     [HideInInspector] public GameState state;
@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
                 {
                     gestureDectection.StopRecognize();
                     guestState = GuestState.Response;
+                    ChangeRepulation(gestureState);
                     AskTextTyperShowResponse(data[personIndex]);
                 }
             }
@@ -244,7 +245,10 @@ public class GameManager : MonoBehaviour
             state = GameState.Ending;
         }
     }
-
+    public void ChangeRepulation(GestureEnum g)
+    {
+        Reputation += data[personIndex].DialogData[dialogIndex].Responses[(int)g].Reputation;
+    }
     IEnumerator TestCode()
     {
         yield return new WaitForSeconds(5);
