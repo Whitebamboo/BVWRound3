@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
                 {
                     gestureDectection.StopRecognize();
                     guestState = GuestState.Response;
+                    ChangeRepulation(gestureState);
                     AskTextTyperShowResponse(data[personIndex]);
                 }
             }
@@ -111,19 +112,16 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             gestureState = GestureEnum.ThumbsUp;
-            changeRepulation(GestureEnum.ThumbsUp);
             GestureFinished = true;
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
             gestureState = GestureEnum.ThumbsDown;
-            changeRepulation(GestureEnum.ThumbsDown);
             GestureFinished = true;
         }
         else if (Input.GetKeyDown(KeyCode.C))
         {
             gestureState = GestureEnum.MiddleFinger;
-            changeRepulation(GestureEnum.MiddleFinger);
             GestureFinished = true;
         }
 
@@ -247,7 +245,7 @@ public class GameManager : MonoBehaviour
             state = GameState.Ending;
         }
     }
-    public void changeRepulation(GestureEnum g)
+    public void ChangeRepulation(GestureEnum g)
     {
         Reputation += data[personIndex].DialogData[dialogIndex].Responses[(int)g].Reputation;
     }
