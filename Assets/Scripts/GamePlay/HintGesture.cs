@@ -9,28 +9,42 @@ using UnityEngine.UI;
 
 public class HintGesture : MonoBehaviour
 {
-    public GameObject Gesture1;
-    public GameObject Gesture2;
-    public GameObject Gesture3;
+    static HintGesture instance;
+    public static HintGesture Instance => instance;
 
-    public TextureData textureData;
 
+
+    public static GameObject Gesture1;
+    public static GameObject Gesture2;
+    public static GameObject Gesture3;
+
+    public static TextureData textureData;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+
+        instance = this;
+    }
     private void Start()
     {
         ShowNormalGestures();
     }
 
 
-    void ShowNormalGestures()
+    public static void ShowNormalGestures()
     {
         Gesture1.transform.GetComponent<Image>().sprite = textureData.FindGesture("ThumbsUp") as Sprite;
         Gesture2.transform.GetComponent<Image>().sprite = textureData.FindGesture("ThumbsDown") as Sprite;
         Gesture3.transform.GetComponent<Image>().sprite = textureData.FindGesture("RaisedHand") as Sprite;
     }
 
-    public void ShowHintGestureUI(bool IsShow)
+    public static void ShowHintGestureUI(bool IsShow)
     {
-        this.gameObject.SetActive(IsShow);
+        instance.gameObject.SetActive(IsShow);
     }
 
 }
