@@ -69,6 +69,12 @@ public class MusicManager : MonoBehaviour
 
     public void PlayClip(AudioClip clip)
     {
+        if(clip == null)
+        {
+            Debug.Log("Null Clip");
+            return;
+        }
+
         if (audioBuffers.Capacity > 0)
         {
             foreach (AudioBuffer b in audioBuffers)

@@ -14,11 +14,12 @@ public class HintGesture : MonoBehaviour
 
 
 
-    public static GameObject Gesture1;
-    public static GameObject Gesture2;
-    public static GameObject Gesture3;
+    public GameObject Gesture1;
+    public GameObject Gesture2;
+    public GameObject Gesture3;
+    public GameObject Model;
 
-    public static TextureData textureData;
+    public TextureData textureData;
     private void Awake()
     {
         if (instance != null)
@@ -35,16 +36,17 @@ public class HintGesture : MonoBehaviour
     }
 
 
-    public static void ShowNormalGestures()
+    public void ShowNormalGestures()
     {
         Gesture1.transform.GetComponent<Image>().sprite = textureData.FindGesture("ThumbsUp") as Sprite;
         Gesture2.transform.GetComponent<Image>().sprite = textureData.FindGesture("ThumbsDown") as Sprite;
         Gesture3.transform.GetComponent<Image>().sprite = textureData.FindGesture("RaisedHand") as Sprite;
     }
 
-    public static void ShowHintGestureUI(bool IsShow)
+    public void ShowHintGestureUI(bool IsShow)
     {
-        instance.gameObject.SetActive(IsShow);
+        Model.SetActive(IsShow);
+        //instance.gameObject.SetActive(IsShow);
     }
 
 }

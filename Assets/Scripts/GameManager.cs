@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
                     gestureDectection.StopRecognize();
                     guestState = GuestState.Response;
                     ChangeRepulation(gestureState);
+                    HintGesture.Instance.ShowHintGestureUI(false);
                     AskTextTyperShowResponse(data[personIndex]);
                 }
             }
@@ -196,6 +197,7 @@ public class GameManager : MonoBehaviour
     {
         if (guestState == GuestState.Dialog)
         {
+            HintGesture.Instance.ShowHintGestureUI(true);
             guestState = GuestState.WaitForGesture;
         }
         else if (guestState == GuestState.Response)
