@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public GestureDectection gestureDectection;
     public GameObject IntroUI;
     public GameObject GuestUI;
+    public GameObject ReputationUI;
     public PersonData[] data;
     public GameObject TextTyper;
     public GestureEnum gestureState; 
@@ -76,8 +77,10 @@ public class GameManager : MonoBehaviour
             if (gestureDectection.matchedGesture == GestureType.MoveNext)
             {
                 state = GameState.Guest;
+                
                 IntroUI.SetActive(false);
                 GuestUI.SetActive(true);
+                ReputationUI.SetActive(true);
             }
         }
 
