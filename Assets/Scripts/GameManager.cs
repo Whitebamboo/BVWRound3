@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => s_Instance;
 
     public GestureDectection gestureDectection;
+    public GameObject TitleUI;
     public GameObject IntroUI;
     public GameObject GuestUI;
     public GameObject ReputationUI;
@@ -69,15 +70,17 @@ public class GameManager : MonoBehaviour
     {
         if (state == GameState.Start)
         {
-            state = GameState.Intro;
+            StartCoroutine("DelayIntroUI");
         }
         if (state == GameState.Intro)
         {
+            TitleUI.SetActive(false);
+            IntroUI.SetActive(true);
             //To Do 
             if (gestureDectection.matchedGesture == GestureType.MoveNext)
             {
                 state = GameState.Guest;
-                
+
                 IntroUI.SetActive(false);
                 GuestUI.SetActive(true);
                 ReputationUI.SetActive(true);
@@ -279,5 +282,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         //GestureFinished = true;
+    }
+    IEnumerator DelayIntroUI()
+    {
+        yield return new WaitForSeconds(5);
+        state = GameState.Intro;
     }
 }
