@@ -20,6 +20,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip thumbsUpClip;
     public AudioClip thumbsDownClip;
     public AudioClip raiseHandClip;
+    public AudioClip OkClip;
 
     public float bufferTime;
     public List<AudioBuffer> audioBuffers = new List<AudioBuffer>();
@@ -65,6 +66,11 @@ public class MusicManager : MonoBehaviour
     void PlayRaiseHandClip()
     {
         PlayClip(raiseHandClip);
+    }
+
+    void PlayOkClip()
+    {
+        PlayClip(OkClip);
     }
 
     public void PlayClip(AudioClip clip)

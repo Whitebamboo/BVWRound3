@@ -243,4 +243,5 @@ MonoBehaviour:
   thumbsUpClip: {fileID: 8300000, guid: f13c746936d022c40af31c846e9816c4, type: 3}
   thumbsDownClip: {fileID: 8300000, guid: 63aacd0c0e902034a9a9ce25346addee, type: 3}
   raiseHandClip: {fileID: 8300000, guid: 12f510d8b9a310044af13f51cbbbe18f, type: 3}
+  OkClip: {fileID: 8300000, guid: 32a8e773c5817a543ad5dbaca0b733ab, type: 3}
   bufferTime: 0.5
