@@ -33,7 +33,7 @@ public class GestureDectection : MonoBehaviour
     [Range(0.001f, 100f)]
     public float threshold = .1f;
     [Range(1f, 10f)]
-    public float recognizingTime = 1.0f;
+    public float recognizingTime = 2.0f;
 
     [Header("Status")]
     public GestureType matchedGesture = GestureType.Undefined;
