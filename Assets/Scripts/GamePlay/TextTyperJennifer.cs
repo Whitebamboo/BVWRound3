@@ -169,7 +169,8 @@ namespace RedBlueGames.Tools.TextTyper
         {
             Debug.Log("TypeText Complete");
             //WaitForGesture then show next scripts
-            StartCoroutine("WaitForGesture");
+            if(!isWaitingForGesture)
+                StartCoroutine("WaitForGesture");
 
 
         }
@@ -180,26 +181,37 @@ namespace RedBlueGames.Tools.TextTyper
             HandlePrintNextClicked();
         }
 
+        bool isWaitingForGesture = false;
+        float m_timer = .0f;
         IEnumerator WaitForGesture()
         {
-            if(dialogueLines.Count > 0)
+            isWaitingForGesture = true;
+            m_timer = .0f;
+            if (dialogueLines.Count > 0)
             {
                 HintGesture.Instance.ShowHintContinueHintUI(true);
-                while (true)
+
+                yield return new WaitUntil(() => gestureDectection.matchedGesture == GestureType.MoveNext);
+                
+                while (m_timer < 6.0f)
                 {
                     if (gestureDectection.matchedGesture == GestureType.MoveNext)
                     {
-                        MusicManager.Instance.PlayOkClip();
                         break;
                     }
                     else
                     {
+                        m_timer += Time.deltaTime;
                         yield return null;
                     }
                 }
+
+                MusicManager.Instance.PlayOkClip();
                 HintGesture.Instance.ShowHintContinueHintUI(false);
             }
             yield return new WaitForSeconds(NextScriptInterval);
+
+            isWaitingForGesture = false;
             HandlePrintNextClicked();
         }
     }

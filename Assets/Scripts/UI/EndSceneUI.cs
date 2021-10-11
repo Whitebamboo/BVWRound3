@@ -28,6 +28,8 @@ public class EndSceneUI : MonoBehaviour
 
     public static void ShowEndSceneUI()
     {
+        if(ScoreTxt == null)
+            ScoreTxt = instance.transform.Find("Score").gameObject;
         instance.gameObject.SetActive(true);
         ScoreTxt.GetComponent<TMPro.TextMeshProUGUI>().text = GameManager.Reputation.ToString();
         

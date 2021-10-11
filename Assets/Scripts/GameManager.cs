@@ -86,6 +86,12 @@ public class GameManager : MonoBehaviour
                 ReputationUI.SetActive(true);
             }
         }
+        else if (state == GameState.Ending)
+        {
+            GuestUI.GetComponent<Canvas>().enabled = false;
+            EndSceneUI.instance.GetComponent<Canvas>().enabled = true;
+            EndSceneUI.ShowEndSceneUI();
+        }
 
         if (state == GameState.Guest)
         {
@@ -101,6 +107,7 @@ public class GameManager : MonoBehaviour
             {
                 //
                 gestureDectection.BeginRecognize();
+                Debug.LogWarning("WaitForGesture");
                 if (GestureFinished)
                 {
                     gestureDectection.StopRecognize();
