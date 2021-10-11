@@ -15,108 +15,87 @@ MonoBehaviour:
   peopleName: Boss
   dialogData:
   - dialogs:
-    - Ahh, here you are!
-    - I want us to chat, and I expect your full honesty in this pressing matter.
-    - Do you like this tie?
-    - <color=#EFD226>My wife got it for me on my birthday.</color>
+    - Ahh, here you are! I want us to chat, and I expect your full honesty in this
+      pressing matter.
+    - <color=#EFD226>Do you like this tie? My wife got it for me on my birthday.</color>
     portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - I see, playing it safe.
-      - "It\u2019s an awful tie, she bought it with just a fistful of dollars and
-        a dozen drinks in her system, on an all-galls trip to Vegas."
-      - "I gotta say, I\u2019m disappointed."
+      - "I see, playing it safe. But it\u2019s an awful tie. I gotta say, I\u2019m
+        disappointed. "
       portrait: {fileID: 21300000, guid: 040c42a55fdcdd7498f8e4c0d94e714d, type: 3}
       sound: {fileID: 8300000, guid: ca831d7ce08163540a4bd2235909884c, type: 3}
       reputation: -15
     - gesture: 1
       response:
-      - "Indeed, indeed, it\u2019s a terrible accessory."
-      - She bought it with just a fistful of dollars and a dozen drinks in her system,
-        on an all-galls trip to Vegas.
-      - I like your truthfulness.
+      - "Indeed, it\u2019s a terrible accessory. I like your truthfulness."
       portrait: {fileID: 21300000, guid: 31f323bce2b7cff40b259d07fefc41c0, type: 3}
       sound: {fileID: 8300000, guid: 35a2167b5a7f73445bfa034700f1e761, type: 3}
       reputation: 15
     - gesture: 2
       response:
-      - "Right, it\u2019s an awful item."
-      - She bought it with just a fistful of dollars and a dozen drinks in her system,
-        on an all-galls trip to Vegas.
-      - "But she\u2019s still a lovely woman, makes me coffee *ahem* almost every
-        morning, so let\u2019s keep it professional."
+      - I know that look, you don't have to tell me.
       portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
       sound: {fileID: 8300000, guid: 1e26c8bc057a503468e704b5572f1676, type: 3}
       reputation: 0
   - dialogs:
     - Let's get down to business.
-    - 'I had a meeting with Bob from the Art department earlier today and he told
-      me I should fire you. '
-    - He insists that you broke into the studios last night and glued googly eyes
-      on all their character sketches.
-    - '<color=#EFD226>Let me ask you this: should I fire Bob? </color>'
+    - '<color=#EFD226>Bob from the Art department wants me to fire you. He insists
+      that you glued googly eyes on all the character sketches. Let me ask you this:
+      should I fire Bob?</color>'
     portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - Yes, yes! I should fire Bob.
-      - We have no space for that kind of trash talk in this company, for making
-        such damaging accusations against a coworker.
-      - 'Also, between you and me, who even cares about the Art department? '
+      - Yes, I should fire Bob! We have no place for trash talk in this company,
+        for making such damaging accusations against a coworker. Also, between you
+        and me, who even cares about the Art department?
       portrait: {fileID: 21300000, guid: 31f323bce2b7cff40b259d07fefc41c0, type: 3}
       sound: {fileID: 8300000, guid: 49b5643b39bf15640920db8af7a9529e, type: 3}
       reputation: 15
     - gesture: 1
       response:
-      - "Mmm, I understand you\u2019re trying to be diplomatic."
-      - "But Bob\u2019s a big loser, I saw it clearly written on his back. "
-      - "So I\u2019ll fire him just the same."
+      - "Mmm, I understand you\u2019re trying to be diplomatic. But Bob\u2019s a
+        big loser, I saw it clearly written on his back. So I\u2019ll fire him just
+        the same."
       portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
       sound: {fileID: 8300000, guid: c504db2208f3b21468c07b767c8459fe, type: 3}
       reputation: 0
     - gesture: 2
       response:
-      - "Are you\u2026 suggesting that what I\u2019m suggesting is a bad idea..? "
-      - "I\u2019m in charge here, and the quality of my propositions should not be
-        questioned by lame inferiors like you."
-      - Also, I hate your shirt.
+      - "Are you\u2026 doubting me? I\u2019m in charge here, and the quality of my
+        propositions should not be questioned by inferiors like you. Also, I hate
+        your shirt."
       portrait: {fileID: 21300000, guid: 040c42a55fdcdd7498f8e4c0d94e714d, type: 3}
       sound: {fileID: 8300000, guid: 1ad1505a30b4d06449fef354ecad49d3, type: 3}
       reputation: -15
   - dialogs:
-    - Ok, one last question for you.
-    - Before I let you go back to work.
-    - "Just a thought I\u2019ve been having\u2026"
-    - <color=#EFD226>How do you feel about 3D models? </color>
+    - <color=#EFD226>Ok, one last question for you. How do you feel about 3D models?</color>
     portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - No! NO!!!
-      - We DO NOT do 3D models here at Flat Games Co.
-      - I HATE THEM.
-      - What are you even doing here???
+      - No! NO!!! We DO NOT do 3D models here at Flat Games Co. I HATE THEM. What
+        are you even doing here???
       portrait: {fileID: 21300000, guid: 040c42a55fdcdd7498f8e4c0d94e714d, type: 3}
       sound: {fileID: 8300000, guid: e49a6efbfc930ac4f9dd09b355bc5ad4, type: 3}
       reputation: -15
     - gesture: 1
       response:
-      - Great, we DO NOT do 3D models here at Flat Games Co.
-      - But more hatred is desired.
-      - 'Keep that in mind the next time someone asks you this question. '
+      - 'Great, we DO NOT do 3D models here at Flat Games Co. But more hatred is
+        desired. Keep that in mind the next time someone asks you this question. '
       portrait: {fileID: 21300000, guid: 4dcc40abb56bf8e409bb5537bbc9fefe, type: 3}
       sound: {fileID: 8300000, guid: c504db2208f3b21468c07b767c8459fe, type: 3}
       reputation: 0
     - gesture: 2
       response:
-      - YES! Exactly!!!
-      - We DO NOT do 3D models here at Flat Games Co.
-      - You truly are a company ambassador at heart.
-      - Also, I love your shirt.
+      - 'You want to stop this conversation because 3D models are so disgusting to
+        you? YES! We DO NOT do 3D models here at Flat Games Co. Also, I love your
+        shirt. '
       portrait: {fileID: 21300000, guid: 31f323bce2b7cff40b259d07fefc41c0, type: 3}
       sound: {fileID: 8300000, guid: 1c89499ba5ca7cf42954b1205b6f56db, type: 3}
       reputation: 15

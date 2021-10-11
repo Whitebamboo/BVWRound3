@@ -15,18 +15,15 @@ MonoBehaviour:
   peopleName: Co-worker
   dialogData:
   - dialogs:
-    - Good morning! How are you?
-    - Are we excited to start our day?
-    - <color=#EFD226>To rise and shine and put all our energy into our work!?!? </color>
+    - <color=#EFD226>Good morning! How are you? Are we excited to start our day!?!?
+      </color>
     portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - "That\u2019s right!!"
       - "A little more enthusiasm wouldn\u2019t hurt you, but I forgive you because
-        it\u2019s Monday, hehe. Have a wonderful day!!!  "
-      - "And remember, there\u2019s no \u201Ci\u201D in \u201Cteam\u201D!!!!!!!!!!!!!!"
+        it\u2019s Monday, hehe."
       portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
       sound: {fileID: 8300000, guid: 54c5d86f24a0fac4f831609d9f8d1a8c, type: 3}
       reputation: 5
@@ -34,16 +31,13 @@ MonoBehaviour:
       response:
       - "Well, that\u2019s why I\u2019m here, to remind you that today is MONDAY
         and MONDAY is FUN DAY!"
-      - So turn that frown upside down!!!
-      - And remember, dream big!!!
       portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
       sound: {fileID: 8300000, guid: ead682b77c6947e4f8ad3c328d9642db, type: 3}
       reputation: 0
     - gesture: 2
       response:
-      - (Tears well up in their eyes)
-      - "Duuuuude\u2026"
-      - What the heck?
+      - "What the heck, I\u2019m just trying to spread positive vibes, why are you
+        repelling them? "
       portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
       sound: {fileID: 8300000, guid: a820611bc4e7f994c8d311dd0c2850e0, type: 3}
       reputation: -5
