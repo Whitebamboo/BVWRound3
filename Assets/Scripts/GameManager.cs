@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => s_Instance;
 
     public GestureDectection gestureDectection;
-
+    public GameObject IntroUI;
+    public GameObject GuestUI;
     public PersonData[] data;
     public GameObject TextTyper;
     public GestureEnum gestureState; 
@@ -65,15 +66,19 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        print(state);
-        print(guestState);
         if (state == GameState.Start)
         {
             state = GameState.Intro;
         }
         if (state == GameState.Intro)
         {
-            state = GameState.Guest;
+            //To Do 
+            if (gestureDectection.matchedGesture == GestureType.MoveNext)
+            {
+                state = GameState.Guest;
+                IntroUI.SetActive(false);
+                GuestUI.SetActive(true);
+            }
         }
 
         if (state == GameState.Guest)
