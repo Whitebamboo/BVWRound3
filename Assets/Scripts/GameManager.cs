@@ -131,39 +131,42 @@ public class GameManager : MonoBehaviour
             GestureFinished = true;
         }
 
-        //Read gesture from GestureDectection
-        GestureType currentGesture = gestureDectection.matchedGesture;
-        if (currentGesture != GestureType.Undefined)
+        if (guestState == GuestState.WaitForGesture)
         {
-            switch (currentGesture)
+            //Read gesture from GestureDectection
+            GestureType currentGesture = gestureDectection.matchedGesture;
+            if (currentGesture != GestureType.Undefined)
             {
-                case GestureType.ThumbsUp:
+                switch (currentGesture)
                 {
-                    gestureState = GestureEnum.ThumbsUp;
-                    GestureFinished = true;
-                    Debug.LogWarning("->ThumbsUp");
-                    break;
+                    case GestureType.ThumbsUp:
+                        {
+                            gestureState = GestureEnum.ThumbsUp;
+                            GestureFinished = true;
+                            Debug.LogWarning("->ThumbsUp");
+                            break;
+                        }
+                    case GestureType.ThumbsDown:
+                        {
+                            gestureState = GestureEnum.ThumbsDown;
+                            GestureFinished = true;
+                            Debug.LogWarning("->ThumbsDown");
+                            break;
+                        }
+                    case GestureType.MiddleFinger:
+                        {
+                            gestureState = GestureEnum.MiddleFinger;
+                            GestureFinished = true;
+                            Debug.LogWarning("->MiddleFinger");
+                            break;
+                        }
+                    default:
+                        {
+                            break;
+                        }
                 }
-                case GestureType.ThumbsDown:
-                {
-                    gestureState = GestureEnum.ThumbsDown;
-                    GestureFinished = true;
-                    Debug.LogWarning("->ThumbsDown");
-                    break;
-                }
-                case GestureType.MiddleFinger:
-                {
-                    gestureState = GestureEnum.MiddleFinger;
-                    GestureFinished = true;
-                    Debug.LogWarning("->MiddleFinger");
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
+
             }
-     
         }
 
     }

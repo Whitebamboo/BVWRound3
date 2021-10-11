@@ -182,25 +182,22 @@ namespace RedBlueGames.Tools.TextTyper
 
         IEnumerator WaitForGesture()
         {
-            if (GameManager.Instance.state != GameState.Guest)
+            HintGesture.Instance.ShowHintContinueHintUI(true);
+
+            while (true)
             {
-                HintGesture.Instance.ShowHintContinueHintUI(true);
-
-                while (true)
+                if (gestureDectection.matchedGesture == GestureType.MoveNext)
                 {
-                    if (gestureDectection.matchedGesture == GestureType.MoveNext)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        yield return null;
-                    }
+                    break;
                 }
-
-                HintGesture.Instance.ShowHintContinueHintUI(false);
+                else
+                {
+                    yield return null;
+                }
             }
-           
+
+            HintGesture.Instance.ShowHintContinueHintUI(false);
+
             yield return new WaitForSeconds(NextScriptInterval);
             HandlePrintNextClicked();
         }
