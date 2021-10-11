@@ -65,17 +65,18 @@ public class GameManager : MonoBehaviour
         //StartCoroutine("TestCode");
 
         gestureDectection = FindObjectOfType<GestureDectection>();
+
+        StartCoroutine("DelayIntroUI");
     }
     private void Update()
     {
+        //print(state);
         if (state == GameState.Start)
         {
-            StartCoroutine("DelayIntroUI");
+            
         }
         if (state == GameState.Intro)
         {
-            TitleUI.SetActive(false);
-            IntroUI.SetActive(true);
             //To Do 
             if (gestureDectection.matchedGesture == GestureType.MoveNext)
             {
@@ -294,5 +295,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         state = GameState.Intro;
+        TitleUI.SetActive(false);
+        IntroUI.SetActive(true);
     }
 }
