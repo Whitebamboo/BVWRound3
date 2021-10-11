@@ -15,72 +15,55 @@ MonoBehaviour:
   peopleName: Secretary
   dialogData:
   - dialogs:
-    - "Hello\u2026 you! The boss will see you soon."
-    - "Maybe I shouldn\u2019t mention this, but it could be about that promotion
-      everyone\u2019s been blabbering about. "
-    - 'Some employees say they would do ANYTHING for this opportunity. '
-    - "And I gotta say, a little birdie told me you were seen sticking post-it notes
-      reading \u201CLOSER\u201D on people\u2019s backs to lower their morale. "
-    - Devastating, really.
-    - "<color=#EFD226>Tell me sweetie.. You can trust me\u2026 Is this true?</color>"
+    - "<color=#EFD226>Hello! So a little birdie told me you were sticking post-it
+      notes reading \u201CLOSER\u201D on people\u2019s backs to lower their morale.
+      Tell me sweetie.. You can trust me\u2026 Is this true? </color>"
     portrait: {fileID: 21300000, guid: 99ae266bf86a3184f9f32834b9384c04, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - 'I see! '
-      - 'How fascinating, indeed! '
-      - "Mmm, well, of course you wouldn\u2019t agree."
-      - "Now, if you\u2019ll excuse me, I just need to send a quick message to a
-        group chat. "
+      - "Don\u2019t worry darling, your secret\u2019s safe with me, I will SO not
+        tell ANYONE about this, promise. "
       portrait: {fileID: 21300000, guid: 01384fb608849884fa2ce93134ed3ea6, type: 3}
       sound: {fileID: 8300000, guid: 748c4b466a4052743a6548b6a992eb57, type: 3}
       reputation: -10
     - gesture: 1
       response:
-      - "Right, right\u2026"
-      - "I mean, I guess I\u2019ll have to take your word for it."
-      - Never seen you near the stack of post-it notes, come to think of it.
+      - "Right, right\u2026I mean, I guess I\u2019ll have to take your word for it."
       portrait: {fileID: 21300000, guid: d7b9970fc86bb434896418bbe3b30634, type: 3}
       sound: {fileID: 8300000, guid: c68c53d84ba02eb4c82e60d0dcb90e9c, type: 3}
       reputation: 10
     - gesture: 2
       response:
-      - Oh, darling!
-      - No need to go to extremes, haha!
-      - "Your aggressiveness makes me question if you\u2019re hiding something..."
-      - "Guess we\u2019re all innocent until proven guilty, right?"
+      - "Hmm, your reluctance makes me question if you\u2019re hiding something\u2026
+        Guess we\u2019re all innocent until proven guilty, right?"
       portrait: {fileID: 21300000, guid: 99ae266bf86a3184f9f32834b9384c04, type: 3}
       sound: {fileID: 8300000, guid: 9cd30b6d4f500e246ae03855a7857766, type: 3}
       reputation: 0
   - dialogs:
-    - Ok, the boss will see you now, I will leave you to it.
-    - "I need to run to a caf\xE9 and fetch him an americano."
-    - "Truly, can\u2019t grown men just get their own coffee?"
-    - <color=#EFD226>Is it too much to ask?</color>
-    portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+    - "<color=#EFD226>I need to run to a caf\xE9 and fetch the boss an americano.
+      Truly, can\u2019t grown men just get their own coffee?</color>"
+    portrait: {fileID: 21300000, guid: 99ae266bf86a3184f9f32834b9384c04, type: 3}
     sound: {fileID: 0}
     responses:
     - gesture: 0
       response:
-      - "Right\u2026"
-      - Here I am, pouring my heart out, and all I get is a meager thumbs up...
-      - Gotta practice my acting skills.
-      portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
+      - "Here I am, pouring my heart out, and all I get is a meager thumbs up\u2026
+        Gotta practice my acting skills."
+      portrait: {fileID: 21300000, guid: 99ae266bf86a3184f9f32834b9384c04, type: 3}
       sound: {fileID: 8300000, guid: 3406a8a99b0f6b640b70c130c7c3c428, type: 3}
       reputation: 0
     - gesture: 1
       response:
-      - "Mmm, well, of course you wouldn\u2019t agree."
-      - "I bet you can\u2019t even do your own laundry."
-      - Gamers are all a bit... useless, after all.
-      portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
+      - "Mmm, well, of course you wouldn\u2019t agree. I bet you can\u2019t even
+        do your own laundry. Gamers are all a bit... useless, after all."
+      portrait: {fileID: 21300000, guid: 01384fb608849884fa2ce93134ed3ea6, type: 3}
       sound: {fileID: 8300000, guid: b1226206267e3314fa28e17e1c5bff31, type: 3}
       reputation: -10
     - gesture: 2
       response:
-      - Exactly, take down the patriarchy!!!
-      - Nice chat, good luck dear!
-      portrait: {fileID: 21300000, guid: c1f1850067e63744d8167dede2c62d70, type: 3}
+      - Yes, high five!!! Take down the patriarchy. Nice chat!
+      portrait: {fileID: 21300000, guid: d7b9970fc86bb434896418bbe3b30634, type: 3}
       sound: {fileID: 8300000, guid: a4a54b1dcd5817349af955eb16eafee6, type: 3}
       reputation: 10
