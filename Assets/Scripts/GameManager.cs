@@ -204,6 +204,8 @@ public class GameManager : MonoBehaviour
     }
 
     //3 Wait for gesture
+
+    //To do waitforgesture don't show ok
     public void WhenTypingCompletedEvent()
     {
         if (guestState == GuestState.Dialog)

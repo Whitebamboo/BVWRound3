@@ -168,7 +168,7 @@ namespace RedBlueGames.Tools.TextTyper
         private void HandlePrintCompleted()
         {
             Debug.Log("TypeText Complete");
-            //3secs later show next scripts
+            //WaitForGesture then show next scripts
             StartCoroutine("WaitForGesture");
 
 
@@ -182,22 +182,22 @@ namespace RedBlueGames.Tools.TextTyper
 
         IEnumerator WaitForGesture()
         {
-            HintGesture.Instance.ShowHintContinueHintUI(true);
-
-            while (true)
+            if(dialogueLines.Count > 0)
             {
-                if (gestureDectection.matchedGesture == GestureType.MoveNext)
+                HintGesture.Instance.ShowHintContinueHintUI(true);
+                while (true)
                 {
-                    break;
+                    if (gestureDectection.matchedGesture == GestureType.MoveNext)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        yield return null;
+                    }
                 }
-                else
-                {
-                    yield return null;
-                }
+                HintGesture.Instance.ShowHintContinueHintUI(false);
             }
-
-            HintGesture.Instance.ShowHintContinueHintUI(false);
-
             yield return new WaitForSeconds(NextScriptInterval);
             HandlePrintNextClicked();
         }
