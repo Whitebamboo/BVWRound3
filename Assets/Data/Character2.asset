@@ -22,7 +22,7 @@ MonoBehaviour:
     - "And I gotta say, a little birdie told me you were seen sticking post-it notes
       reading \u201CLOSER\u201D on people\u2019s backs to lower their morale. "
     - Devastating, really.
-    - "Tell me sweetie.. You can trust me\u2026 Is this true?"
+    - "<color=#EFD226>Tell me sweetie.. You can trust me\u2026 Is this true?</color>"
     portrait: {fileID: 21300000, guid: 99ae266bf86a3184f9f32834b9384c04, type: 3}
     sound: {fileID: 0}
     responses:
@@ -30,8 +30,7 @@ MonoBehaviour:
       response:
       - 'I see! '
       - 'How fascinating, indeed! '
-      - "Don\u2019t worry darling, your secret\u2019s safe with me, I will SO not
-        tell ANYONE about this, promise. "
+      - "Mmm, well, of course you wouldn\u2019t agree."
       - "Now, if you\u2019ll excuse me, I just need to send a quick message to a
         group chat. "
       portrait: {fileID: 21300000, guid: 01384fb608849884fa2ce93134ed3ea6, type: 3}
@@ -58,7 +57,7 @@ MonoBehaviour:
     - Ok, the boss will see you now, I will leave you to it.
     - "I need to run to a caf\xE9 and fetch him an americano."
     - "Truly, can\u2019t grown men just get their own coffee?"
-    - Is it too much to ask?
+    - <color=#EFD226>Is it too much to ask?</color>
     portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
     sound: {fileID: 0}
     responses:
@@ -72,7 +71,7 @@ MonoBehaviour:
       reputation: 0
     - gesture: 1
       response:
-      - "(Indignant)Mmm, well, of course you wouldn\u2019t agree."
+      - "Mmm, well, of course you wouldn\u2019t agree."
       - "I bet you can\u2019t even do your own laundry."
       - Gamers are all a bit... useless, after all.
       portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}

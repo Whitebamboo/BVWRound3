@@ -17,8 +17,7 @@ MonoBehaviour:
   - dialogs:
     - Good morning! How are you?
     - Are we excited to start our day?
-    - <color=#ff0000ff>To rise and shine and put all our energy into our work!?!?
-      </color>
+    - <color=#EFD226>To rise and shine and put all our energy into our work!?!? </color>
     portrait: {fileID: 21300000, guid: ea1c37a32565eca4185a89fd5e52dfc2, type: 3}
     sound: {fileID: 0}
     responses:
@@ -44,7 +43,7 @@ MonoBehaviour:
       response:
       - (Tears well up in their eyes)
       - "Duuuuude\u2026"
-      - What the heck?(Cries)
+      - What the heck?
       portrait: {fileID: 21300000, guid: d0becb43d3f54fd4ebb9601c5cf5f05c, type: 3}
       sound: {fileID: 8300000, guid: a820611bc4e7f994c8d311dd0c2850e0, type: 3}
       reputation: -5
