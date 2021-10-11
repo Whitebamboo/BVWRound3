@@ -182,6 +182,8 @@ namespace RedBlueGames.Tools.TextTyper
 
         IEnumerator WaitForGesture()
         {
+            HintGesture.Instance.ShowHintContinueHintUI(true);
+
             while (true)
             {
                 if (gestureDectection.matchedGesture == GestureType.MoveNext)
@@ -193,6 +195,9 @@ namespace RedBlueGames.Tools.TextTyper
                     yield return null;
                 }
             }
+
+            HintGesture.Instance.ShowHintContinueHintUI(false);
+
             yield return new WaitForSeconds(NextScriptInterval);
             HandlePrintNextClicked();
         }

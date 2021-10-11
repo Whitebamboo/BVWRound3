@@ -18,6 +18,7 @@ public class HintGesture : MonoBehaviour
     public GameObject Gesture2;
     public GameObject Gesture3;
     public GameObject Model;
+    public GameObject ContinueHintUI;
 
     public TextureData textureData;
     private void Awake()
@@ -47,6 +48,11 @@ public class HintGesture : MonoBehaviour
     {
         Model.SetActive(IsShow);
         //instance.gameObject.SetActive(IsShow);
+    }
+
+    public void ShowHintContinueHintUI(bool IsShow)
+    {
+        ContinueHintUI.SetActive(IsShow);
     }
 
 }
