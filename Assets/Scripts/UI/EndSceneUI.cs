@@ -28,8 +28,9 @@ public class EndSceneUI : MonoBehaviour
 
     public static void ShowEndSceneUI()
     {
-        ScoreTxt.GetComponent<TMPro.TextMeshProUGUI>().text = GameManager.Reputation.ToString();
         instance.gameObject.SetActive(true);
+        ScoreTxt.GetComponent<TMPro.TextMeshProUGUI>().text = GameManager.Reputation.ToString();
+        
         //+ " / 100";
     }
 }
