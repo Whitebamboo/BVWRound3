@@ -301,7 +301,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sir Talksalot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fab7320cf9337549a2a302827b3de43, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &58232449
@@ -636,8 +636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fab7320cf9337549a2a302827b3de43, type: 2}
+  m_sharedMaterial: {fileID: -2011167047295473508, guid: 8fab7320cf9337549a2a302827b3de43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4165,7 +4165,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Make a gesture
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8fab7320cf9337549a2a302827b3de43, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4229,7 +4229,7 @@ MonoBehaviour:
   m_margin: {x: -69.18086, y: 10.547292, z: 108.73296, w: 9.675086}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1651338155
@@ -5784,6 +5784,10 @@ PrefabInstance:
       value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 3080460657547638413, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fab7320cf9337549a2a302827b3de43, type: 2}
+    - target: {fileID: 3080460657547638413, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_fontSizeBase
       value: 28
       objectReference: {fileID: 0}
@@ -5795,13 +5799,21 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3080460657547638413, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922662040024810723, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.185
+      objectReference: {fileID: 0}
     - target: {fileID: 7922662040024810723, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.139
+      value: -0.036
       objectReference: {fileID: 0}
     - target: {fileID: 7922662040024810723, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9
+      value: 2.878
       objectReference: {fileID: 0}
     - target: {fileID: 8626437156523001537, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_Name
@@ -5809,7 +5821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8626437156523001537, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8626437156523001538, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_Pivot.x
@@ -5913,7 +5925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8626437158182117359, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf4b2cbc768a2db45906c2b6df76e0dc, type: 3}

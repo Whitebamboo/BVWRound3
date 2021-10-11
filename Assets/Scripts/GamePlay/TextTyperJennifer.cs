@@ -189,6 +189,7 @@ namespace RedBlueGames.Tools.TextTyper
                 {
                     if (gestureDectection.matchedGesture == GestureType.MoveNext)
                     {
+                        MusicManager.Instance.PlayOkClip();
                         break;
                     }
                     else

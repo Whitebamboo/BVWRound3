@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 3669962aaa7b1bb40a3cf8e6c1816440
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Gecade
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d0b98820054fdb842a9f4978e90219fa, type: 3}
+  - {fileID: 12800000, guid: 9546c339d0308c7468262ddda4cb8cfb, type: 3}
+  - {fileID: 12800000, guid: 6119875b677ae34478f2e08e333b7e41, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

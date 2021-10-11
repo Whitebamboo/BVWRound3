@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
                         {
                             gestureState = GestureEnum.ThumbsUp;
                             GestureFinished = true;
+                            MusicManager.Instance.PlayThumbsUpClip();
                             Debug.LogWarning("->ThumbsUp");
                             break;
                         }
@@ -153,6 +154,7 @@ public class GameManager : MonoBehaviour
                         {
                             gestureState = GestureEnum.ThumbsDown;
                             GestureFinished = true;
+                            MusicManager.Instance.PlayThumbsDownClip();
                             Debug.LogWarning("->ThumbsDown");
                             break;
                         }
@@ -160,6 +162,7 @@ public class GameManager : MonoBehaviour
                         {
                             gestureState = GestureEnum.MiddleFinger;
                             GestureFinished = true;
+                            MusicManager.Instance.PlayRaiseHandClip();
                             Debug.LogWarning("->MiddleFinger");
                             break;
                         }
@@ -198,7 +201,7 @@ public class GameManager : MonoBehaviour
         message[1] = personData.PeopleName;
 
         PortraitManager.Instance.SetPortrait(dp.Portraits);
-        MusicManager.Instance.PlayClip(dp.Sound);
+        MusicManager.Instance.PlayClip(dp.Sound, 0.5f);
 
         TextTyper.SendMessage("ReceiveDialogEvent", message, SendMessageOptions.RequireReceiver);
     }
@@ -247,7 +250,7 @@ public class GameManager : MonoBehaviour
         message[1] = personData.PeopleName;
 
         PortraitManager.Instance.SetPortrait(portrait);
-        MusicManager.Instance.PlayClip(aduio);
+        MusicManager.Instance.PlayClip(aduio, 0.5f);
 
         TextTyper.SendMessage("ReceiveDialogEvent", message, SendMessageOptions.RequireReceiver);
 

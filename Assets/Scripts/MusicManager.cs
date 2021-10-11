@@ -53,27 +53,27 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    void PlayThumbsUpClip()
+    public void PlayThumbsUpClip()
     {
         PlayClip(thumbsUpClip);
-    }    
-    
-    void PlayThumbsDownClip()
+    }
+
+    public void PlayThumbsDownClip()
     {
         PlayClip(thumbsDownClip);
-    }    
-    
-    void PlayRaiseHandClip()
+    }
+
+    public void PlayRaiseHandClip()
     {
         PlayClip(raiseHandClip);
     }
 
-    void PlayOkClip()
+    public void PlayOkClip()
     {
         PlayClip(OkClip);
     }
 
-    public void PlayClip(AudioClip clip)
+    public void PlayClip(AudioClip clip, float delay = 0)
     {
         if(clip == null)
         {
@@ -96,7 +96,15 @@ public class MusicManager : MonoBehaviour
             }
         }
 
-        sfxAudioSource.PlayOneShot(clip);
+        if(delay > 0)
+        {
+            sfxAudioSource.clip = clip;
+            sfxAudioSource.PlayDelayed(delay);
+        }
+        else
+        {
+            sfxAudioSource.PlayOneShot(clip);
+        }
 
         AudioBuffer buffer = new AudioBuffer();
         buffer.name = clip.name;
