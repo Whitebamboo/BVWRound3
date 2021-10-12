@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
                 Debug.LogWarning("WaitForGesture");
                 if (GestureFinished)
                 {
+                    GestureFinished = false;
                     gestureDectection.StopRecognize();
                     guestState = GuestState.Response;
                     ChangeRepulation(gestureState);
