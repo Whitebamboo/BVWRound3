@@ -144,7 +144,11 @@ public class GameManager : MonoBehaviour
             gestureState = GestureEnum.MiddleFinger;
             GestureFinished = true;
         }
-
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            gestureDectection.matchedGesture = GestureType.MoveNext;
+        }
+        print(gestureDectection.matchedGesture);
         if (guestState == GuestState.WaitForGesture)
         {
             //Read gesture from GestureDectection
@@ -280,9 +284,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GuestLeaving()
     {
+        GestureFinished = false;
         yield return new WaitForSeconds(5);
         //TO DO
-        GestureFinished = false;
+        
         if (personIndex < data.Length - 1)
         {
             personIndex++;
