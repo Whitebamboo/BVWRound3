@@ -109,6 +109,12 @@ public class GestureDectection : MonoBehaviour
         Gesture currentGesture = new Gesture();
         float currentMin = Mathf.Infinity;
 
+        if (skeleton.Bones.Count == 0)
+        {
+            currentGesture.gestureType = GestureType.Undefined;
+            return currentGesture;
+        }
+
         foreach (var gesture in gestures)
         {
             float sumDistance = 0f;
