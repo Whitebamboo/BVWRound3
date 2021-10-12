@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
             }
             else if (guestState == GuestState.End)
             {
-                guestLeaving();
+                
             }
         }
 
@@ -238,6 +238,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 guestState = GuestState.End;
+                StartCoroutine("GuestLeaving");
             }
 
             
@@ -266,9 +267,20 @@ public class GameManager : MonoBehaviour
         TextTyper.SendMessage("ReceiveDialogEvent", message, SendMessageOptions.RequireReceiver);
 
     }
-    //Guest leaves
-    void guestLeaving()
+
+    public void ChangeRepulation(GestureEnum g)
     {
+        Reputation += data[personIndex].DialogData[dialogIndex].Responses[(int)g].Reputation;
+    }
+    IEnumerator TestCode()
+    {
+        yield return new WaitForSeconds(5);
+        //GestureFinished = true;
+    }
+
+    IEnumerator GuestLeaving()
+    {
+        yield return new WaitForSeconds(5);
         //TO DO
         GestureFinished = false;
         if (personIndex < data.Length - 1)
@@ -281,15 +293,6 @@ public class GameManager : MonoBehaviour
             //Enter ending
             state = GameState.Ending;
         }
-    }
-    public void ChangeRepulation(GestureEnum g)
-    {
-        Reputation += data[personIndex].DialogData[dialogIndex].Responses[(int)g].Reputation;
-    }
-    IEnumerator TestCode()
-    {
-        yield return new WaitForSeconds(5);
-        //GestureFinished = true;
     }
     IEnumerator DelayIntroUI()
     {

@@ -191,9 +191,9 @@ namespace RedBlueGames.Tools.TextTyper
             {
                 HintGesture.Instance.ShowHintContinueHintUI(true);
 
-                yield return new WaitUntil(() => gestureDectection.matchedGesture == GestureType.MoveNext);
+                //yield return new WaitUntil(() => gestureDectection.matchedGesture == GestureType.MoveNext);
                 
-                while (m_timer < 6.0f)
+                while (m_timer < 4.0f)
                 {
                     if (gestureDectection.matchedGesture == GestureType.MoveNext)
                     {
